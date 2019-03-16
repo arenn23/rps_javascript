@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
+<title>Alan`s JavaScript RPS Game</title>
+</head>
+<body>
+<form>
+<input type = "button" onclick="function1()" value="rock" id="rock">
+<input type = "button" onclick="function2()" value="paper" id="paper">
+<input type = "button" onclick="function3()" value="scissors" id="scissors">
+<div>
+<h1 id="text"></h1>
+</form>
+
+<script>
+//Rock = 1; paper = 2; scissors = 3; i = human wins; j = computer wins
+i = 0;
+j = 0;
+function function1(){
+	var human = 1;
+	var computer = Math.floor(Math.random()*3) +1;
+	if (computer == 1){
+		var a = "Rock";
+	} else if (computer == 2) {
+		var a = "Paper";
+	}else {
+		var a = "Scissors";
+	}
+	if (human == computer){
+		document.getElementById('text').innerHTML = "Computer chose " + a + ". Tie. You = " + i + " Computer = " + j;
+	}else if(computer - human == 1){
+		j = j +1;
+		document.getElementById('text').innerHTML = "Computer chose " + a + ". You lose. You = " + i + " Computer = " + j;
+	}else {
+		i = i+1;
+		document.getElementById('text').innerHTML = "Computer chose " + a + ". You win. You = " + i + " Computer = " + j;
+	}
+}
+function function2(){
+	var human = 2;
+	var computer = Math.floor(Math.random()*3) +1;
+	if (computer == 1){
+		var a = "Rock";
+	} else if (computer == 2) {
+		var a = "Paper";
+	}else {
+		var a = "Scissors";
+	}
+	if (human == computer){
+		document.getElementById('text').innerHTML = "Computer chose " + a + ". Tie. You = " + i + " Computer = " + j;
+	}else if(computer - human == 1){
+		j = j +1;
+		document.getElementById('text').innerHTML = "Computer chose " + a + ". You lose. You = " + i + " Computer = " + j;
+	}else {
+		i = i+1;
+		document.getElementById('text').innerHTML = "Computer chose " + a + ". You win. You = " + i + " Computer = " + j;
+	}
+}
+function function3(){
+	var human = 3;
+	var computer = Math.floor(Math.random()*3) +1;
+	if (computer == 1){
+		var a = "Rock";
+	} else if (computer == 2) {
+		var a = "Paper";
+	}else {
+		var a = "Scissors";
+	}
+	if (human == computer){
+		document.getElementById('text').innerHTML = "Computer chose " + a + ". Tie. You = " + i + " Computer = " + j;
+	}else if(computer - human == -2){
+		j = j +1;
+		document.getElementById('text').innerHTML = "Computer chose " + a + ". You lose. You = " + i + " Computer = " + j;
+	}else {
+		i = i+1;
+		document.getElementById('text').innerHTML = "Computer chose " + a + ". You win. You = " + i + " Computer = " + j;
+	}
+}
+
+
+</script>
+</body>
+</html>
